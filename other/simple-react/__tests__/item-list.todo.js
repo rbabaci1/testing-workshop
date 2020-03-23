@@ -16,7 +16,7 @@ import ReactDOM from 'react-dom'
 // So you can create a react element for the component you're testing:
 import ItemList from '../item-list'
 
-test('title', () => {
+test('renders a list with no items', () => {
   const container = document.createElement('div')
 
   ReactDOM.render(<ItemList items={[]} />, container)
@@ -33,6 +33,15 @@ test('title', () => {
 //   for example: `expect('some text content').toMatch('text')`)
 //
 // For your second test, it will be very similar to the first.
+test('renders a list with items', () => {
+  const container = document.createElement('div')
+
+  ReactDOM.render(<ItemList items={['apple', 'orange', 'pear']} />, container)
+
+  expect(container.textContent).toMatch('apple')
+  expect(container.textContent).toMatch('orange')
+  expect(container.textContent).toMatch('pear')
+})
 
 //////// Elaboration & Feedback /////////
 // When you've finished with the exercises:
