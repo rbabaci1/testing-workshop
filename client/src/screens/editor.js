@@ -29,6 +29,7 @@ class Editor extends Component {
             Title
           </label>
           <Input id="title-input" placeholder="Title" name="title" />
+
           <label
             style={{justifySelf: 'right', alignSelf: 'baseline'}}
             htmlFor="content-input"
@@ -36,6 +37,7 @@ class Editor extends Component {
             Content
           </label>
           <TextArea id="content-input" placeholder="Content" name="content" />
+
           <label style={{justifySelf: 'right'}} htmlFor="tags-input">
             Tags
           </label>
